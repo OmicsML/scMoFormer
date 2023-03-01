@@ -20,7 +20,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from utils import config
 from utils.posenc import laplacian_positional_encoding
 from graph_construct import create_graph
-from model import ScMoFormer
+from scmoformer import ScMoFormer
 
 
 logger = config.get_logger("train")
