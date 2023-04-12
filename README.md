@@ -1,6 +1,6 @@
 # scMoFormer
 
-This is the official implementation of *Single-Cell Multimodal Prediction via Transformers* [Arxiv](https://arxiv.org/abs/2303.00233).
+This is the official implementation of *Single-Cell Multimodal Prediction via Transformers* [Arxiv](https://arxiv.org/abs/2303.00233). To facilitate the reproducibility of our work, please execute the script 'run.sh'.
 
 # Data Avalability
 
