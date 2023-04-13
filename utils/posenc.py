@@ -17,9 +17,9 @@ def laplacian_positional_encoding(g, pos_enc_dim):
     shape = (g.num_nodes(), g.num_nodes())
     A = csr_matrix(coo_matrix(graph_edata, shape))
     N = sp.diags(np.array(A.sum(0))[0] ** -0.5, dtype=float)
-    L = sp.eye(g.num_nodes()) - N * A * N
+    L = sp.eye(A.shape[0]) - N * A * N
 
-    EigVal, EigVec = np.linalg.eig(L.toarray())
+    EigVal, EigVec = sp.linalg.eigs(L, pos_enc_dim + 1, which="SM")
     idx = EigVal.argsort()
     EigVal, EigVec = EigVal[idx], np.real(EigVec[:,idx])
-    return torch.from_numpy(EigVec[:,1:pos_enc_dim+1]).float() 
+    return torch.from_numpy(EigVec[:,1:]).float()
