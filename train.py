@@ -128,7 +128,7 @@ act, sage_agg, pos_enc_dim, layers = "selu", "mean", 10, [512, 512, 512, 512]
 patience, tol, lr, trans_head = 20, 40, 1e-3, 8
 local_gnn_type, global_model_type, pna_degrees = "SAGE", "Performer", None
 params = {
-    "cite": (.5, .1, 8000, 1e-6),
+    "cite": (.5, .1, 3000, 1e-6),
     "gex2adt": (.5, .1, 10000, 1e-5),
 }
 feat_drop, attn_drop, batch_size, weight_decay = params[subtask]
