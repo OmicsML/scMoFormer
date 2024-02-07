@@ -26,5 +26,5 @@ if subtask == "gex2adt":
             os.system(f"mv {fpath} {outpath}")
 elif subtask == "cite":
     os.system("kaggle competitions download -c open-problems-multimodal")
-    os.system("unzip open-problems-multimodal.zip -d {config.RAW_DATA_DIR}")
+    os.system(f"unzip open-problems-multimodal.zip -d {config.RAW_DATA_DIR}")
     os.system("rm -f open-problems-multimodal.zip")
